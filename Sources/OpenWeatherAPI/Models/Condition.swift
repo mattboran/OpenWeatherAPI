@@ -30,9 +30,6 @@ public struct Condition: Codable {
     public var iconUrl: String { 
         return "https://openweathermap.org/img/wn/\(icon)@2x.png"
     }
-}
-
-extension Condition {
 
     public enum ConditionGroup: String {
         case thunderstorm

@@ -71,6 +71,7 @@ public class Client {
         if let language = language {
             queryItems.append(URLQueryItem(name: "lang", value: language.rawValue))
         }
+
         var urlComponents = URLComponents(string: Self.baseURL)!
         urlComponents.queryItems = queryItems
         return urlComponents.url!
