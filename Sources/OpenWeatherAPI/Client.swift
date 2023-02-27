@@ -16,7 +16,7 @@ public class Client {
 
     // MARK: - Initializers
 
-    public init(apiKey: String, 
+    public init(apiKey: String,
                 exclude: [ExcludeOptions] = [],
                 units: Units = .standard,
                 language: Language? = nil) {
@@ -27,7 +27,7 @@ public class Client {
         self.dataService = DataService()
     }
 
-    init(apiKey: String, 
+    init(apiKey: String,
          exclude: [ExcludeOptions] = [],
          units: Units = .standard,
          language: Language? = nil,
@@ -67,7 +67,7 @@ public class Client {
         let excludeString = exclude.map { $0.rawValue }.joined(separator: ",")
         queryItems.append(URLQueryItem(name: "exclude", value: excludeString))
         queryItems.append(URLQueryItem(name: "units", value: units.rawValue))
-        
+
         if let language = language {
             queryItems.append(URLQueryItem(name: "lang", value: language.rawValue))
         }

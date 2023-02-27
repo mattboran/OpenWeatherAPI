@@ -1,12 +1,12 @@
 import Foundation
 
-public struct Condition: Codable { 
+public struct Condition: Codable {
     public let id: Int
     public let main: String
     public let description: String
     public let icon: String
 
-    public var conditionGroup: ConditionGroup { 
+    public var conditionGroup: ConditionGroup {
         switch id {
         case 200...232:
             return .thunderstorm
@@ -27,7 +27,7 @@ public struct Condition: Codable {
         }
     }
 
-    public var iconUrl: String { 
+    public var iconUrl: String {
         return "https://openweathermap.org/img/wn/\(icon)@2x.png"
     }
 

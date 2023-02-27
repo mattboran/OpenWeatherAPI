@@ -71,36 +71,34 @@ public struct DailyWeather: Codable {
     }
 }
 
-extension DailyWeather { 
-    public struct Temperature: Codable {
-        public let day: Double?
-        public let min: Double?
-        public let max: Double?
-        public let night: Double?
-        public let eve: Double?
-        public let morning: Double?
+public struct Temperature: Codable {
+    public let day: Double?
+    public let min: Double?
+    public let max: Double?
+    public let night: Double?
+    public let eve: Double?
+    public let morning: Double?
 
-        public enum CodingKeys: String, CodingKey {
-            case day
-            case min
-            case max
-            case night
-            case eve
-            case morning = "morn"
-        }
+    public enum CodingKeys: String, CodingKey {
+        case day
+        case min
+        case max
+        case night
+        case eve
+        case morning = "morn"
     }
+}
 
-    public struct FeelsLike: Codable {
-        public let day: Double?
-        public let night: Double?
-        public let eve: Double?
-        public let morning: Double?
+public struct FeelsLike: Codable {
+    public let day: Double?
+    public let night: Double?
+    public let eve: Double?
+    public let morning: Double?
 
-        public enum CodingKeys: String, CodingKey {
-            case day
-            case night
-            case eve
-            case morning = "morn"
-        }
+    public enum CodingKeys: String, CodingKey {
+        case day
+        case night
+        case eve
+        case morning = "morn"
     }
 }

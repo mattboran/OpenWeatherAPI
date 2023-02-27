@@ -7,7 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "OpenWeatherAPI",
-            targets: ["OpenWeatherAPI"]),
+            targets: ["OpenWeatherAPI"])
     ],
     dependencies: [
     ],
@@ -17,6 +17,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "OpenWeatherAPITests",
-            dependencies: ["OpenWeatherAPI"]),
+            dependencies: ["OpenWeatherAPI"])
     ]
 )
