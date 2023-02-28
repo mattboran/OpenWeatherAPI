@@ -9,14 +9,13 @@ let package = Package(
             name: "OpenWeatherAPI",
             targets: ["OpenWeatherAPI"])
     ],
-    dependencies: [
-    ],
     targets: [
         .target(
             name: "OpenWeatherAPI",
             dependencies: []),
         .testTarget(
             name: "OpenWeatherAPITests",
-            dependencies: ["OpenWeatherAPI"])
-    ]
+            dependencies: ["OpenWeatherAPI"],
+            resources: [.copy("Resources")])
+        ]
 )
