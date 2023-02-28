@@ -14,7 +14,10 @@ final class ClientTests: XCTestCase {
         client.fetchWeather(latitude: Self.latitude, longitude: Self.longitude, completion: nil)
         XCTAssertEqual(
             dataService.queryURL?.absoluteString,
-            "https://api.openweathermap.org/data/3.0/onecall?lat=39.7392&lon=-104.9903&appid=TEST_API_KEY&units=standard")
+            """
+            https://api.openweathermap.org/data/3.0/onecall?\
+            lat=39.7392&lon=-104.9903&appid=TEST_API_KEY&units=standard
+            """)
 
         client = Client(
             apiKey: Self.apiKey,
@@ -25,6 +28,10 @@ final class ClientTests: XCTestCase {
         client.fetchWeather(latitude: Self.latitude, longitude: Self.longitude, completion: nil)
         XCTAssertEqual(
             dataService.queryURL?.absoluteString,
-            "https://api.openweathermap.org/data/3.0/onecall?lat=39.7392&lon=-104.9903&appid=TEST_API_KEY&exclude=alerts,daily,hourly,minutely&units=metric&lang=ro")
+            """
+            https://api.openweathermap.org/data/3.0/onecall?\
+            lat=39.7392&lon=-104.9903&appid=TEST_API_KEY&\
+            exclude=alerts,daily,hourly,minutely&units=metric&lang=ro
+            """)
     }
 }
