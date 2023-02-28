@@ -65,7 +65,9 @@ public class Client {
             URLQueryItem(name: "appid", value: apiKey)
         ]
         let excludeString = exclude.map { $0.rawValue }.joined(separator: ",")
-        queryItems.append(URLQueryItem(name: "exclude", value: excludeString))
+        if !excludeString.isEmpty {
+            queryItems.append(URLQueryItem(name: "exclude", value: excludeString))
+        }
         queryItems.append(URLQueryItem(name: "units", value: units.rawValue))
 
         if let language = language {
