@@ -43,6 +43,9 @@ client.fetchWeather(latitude: latitude, longitude: longitude) { result in
         print("Error getting current weather:", error)
     }
 }
+
+// For iOS 13+ and MacOS 10.15+, use the async version of the above method:
+let result = try await client.fetchWeatherAsync(latitude: latitude, longitude: longitude)
 ```
 
 ## Contributing
