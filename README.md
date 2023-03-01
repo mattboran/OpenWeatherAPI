@@ -48,6 +48,8 @@ client.fetchWeather(latitude: latitude, longitude: longitude) { result in
 let result = try await client.fetchWeatherAsync(latitude: latitude, longitude: longitude)
 ```
 
+See the [full documentation](https://mattboran.github.io/OpenWeatherAPI/documentation/openweatherapi/) for more information.
+
 ## Contributing
 If you find a bug or would like to contribute to this Swift package, please open an issue or submit a pull request on [GitHub](https://github.com/mattboran/OpenWeatherAPI).
 
